@@ -350,7 +350,9 @@ input:focus-within{
 .form-container {
   /* margin:1rem; */
   padding: 1rem 2rem;
-  border-radius: .5rem;
+  border-radius: .7rem;
+  padding-bottom: 3rem;
+  box-shadow: 0 .5rem 0 0 hsl(249 10% 26% /.25);
 
 }
 .form-elem{
