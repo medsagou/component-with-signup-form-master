@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="./srcipt.js" defer></script>
+    <link rel="icon" href="./images/favicon.ico">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <title>Intro component with sign up form</title>
+</head>
+<body>
+    <main>
+        <div class="left-text-container">
+            <h1 class="title">Learn to code by watching others</h1>
+            <p class="paragraphe"> See how experienced developers solve problems in real-time. Watching scripted tutorials is great, but understanding how developers think is invaluable. </p>
+        </div>
+
+        <div class="right-text-container">
+            <div class="try-it-free-container">
+                <p class="try-it-free-text"> Try it free 7 days <span class="soft-text">then $20/mo. thereafter</span></p>
+            </div>
+
+            <form class="form-container">
+                <div class="error-icon-input-container">
+                    <input name="first-name" type="text" class="form-elem | first-name" placeholder="First Name" state="no-error" required>
+                    <p id="paraOne" class="error-msg | error-mas-first-Name" style="display: none;">First Name cannot be empty</p>
+                    <img id="icon-1" src="./images/icon-error.svg" alt="" class="error-icon | icon-1" style="display: none;">
+                </div>
+
+                <div class="error-icon-input-container">
+                    <input name="last-name" type="text" class="form-elem | last-name" placeholder="Last Name" state="no-error" required>
+                    <p id="paraTwo" class="error-msg | error-mas-Last-Name" style="display: none;">Last Name cannot be empty</p>
+                    <img id="icon-2" src="./images/icon-error.svg" alt="" class="error-icon | icon-2" style="display: none;">
+                </div>
+
+                <div class="error-icon-input-container">
+                    <input name="email" type="email" class="form-elem | Email" placeholder="Email Address" state="no-error" required>
+                    <p id="paraThree" class="error-msg | error-mas-email" style="display: none;">Looks like this is not an email</p>
+                    <img id="icon-3" src="./images/icon-error.svg" alt="" class="error-icon | icon-3" style="display: none;">
+                </div>
+
+                <div class="error-icon-input-container">
+                    <input name="password" type="password" class="form-elem | password" placeholder="Password" state="no-error" required>
+                    <p id="paraFour" class="error-msg | error-mas-password" style="display: none;">Password cannot be empty</p>
+                    <img id="icon-4" src="./images/icon-error.svg" alt="" class="error-icon | icon-4" style="display: none;">
+                </div>
+                <button id="submit-button" type="submit" class="submit-button"> Claim your free trial</button>
+                <div class="text-below">
+                    <p class="text-below-text">By clicking the button, you are agreeing to our <a href="#">Terms and Services</a></p>
+                </div>
+            </form>
+        </div>
+    </main>
+</body>
+</html>

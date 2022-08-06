@@ -1,0 +1,444 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+
+:root {
+    --primary-300 : hsl(0, 100%, 74%);
+    --primary-200 : hsl(154, 59%, 51%);
+    --primary-100 : hsl(0, 0%, 100%);
+
+    --accent-400 : hsl(248, 32%, 49%);
+
+    --neutral-500: hsl(249, 10%, 26%) ;
+    --neutral-100: hsl(246, 25%, 77%);
+
+    --fs-primary: 16px;
+
+    --ff-primary: 'Poppins', sans-serif;
+
+    --fw-400: 400;
+    --fw-500: 500;
+    --fw-600: 600;
+    --fw-700: 700;
+
+}
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* background-color and image and font size and family */
+html {
+    font-size: var(--fs-primary);
+    font-family: var(--ff-primary);
+    background-color: var(--primary-300);
+    background-image: url('./images/bg-intro-mobile.png');
+}
+body {
+    margin: 1.5rem;
+}
+
+/* first part */
+.left-text-container{
+  justify-content: center;
+}
+.title{
+    color: var(--primary-100);
+    font-weight: var(--fw-700);
+    font-size: 1.7rem;
+    text-align: center;
+    max-width: 20rem;
+    margin: auto;
+    margin-top: 7rem;
+    margin-bottom: 1.5rem;
+}
+.paragraphe {
+    color: hsl(0 0% 100% / .9);
+    text-align: center;
+    max-width: 20rem;
+    margin: auto;
+    font-weight: var(--fw-500);
+    margin-top:1rem;
+    margin-bottom: 4rem;
+}
+
+/* second part */
+.try-it-free-container {
+    background-color: var(--accent-400);
+    color: var(--primary-100);
+    font-weight: var(--fw-600);
+    text-align: center;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-radius: .7rem;
+    line-height: 1.5rem;
+    box-shadow: 0 .5rem 0 0 hsl(249 10% 26% /.25);
+}
+.try-it-free-text{
+    width: 80%;
+    margin: auto;
+
+}
+.try-it-free-container span {
+    color: hsl(0 0% 100% / .8);
+    font-weight: var(--fw-400);
+}
+
+/* form */
+.form-container {
+    background-color: var(--primary-100);
+    display: flex;
+    flex-direction: column;
+    /* margin:1rem; */
+    padding: 1.5rem 1.5rem;
+    border-radius: .7rem;
+
+}
+.form-elem{
+    border: 1px solid  hsl(246 25% 77% / .3);
+    padding: 1rem 1rem;
+    border-radius: .4rem;
+    margin-top: 1rem;
+    width: 100%;
+}
+.form-elem::placeholder {
+    color: var(--neutral-100);
+    font-weight: var(--fw-600);
+    font-size: .8rem;
+}
+.form-elem[state="error"]::placeholder {
+  color: hsl(0, 100%, 74%);
+}
+.form-elem {
+  color: var(--neutral-500);
+  font-weight: var(--fw-600);
+  font-size: .8rem;
+}
+
+/* submit button */
+.submit-button {
+    background-color: var(--primary-200);
+    border: none;
+    color: var(--primary-100);
+    /* padding: 1.2rem 0; */
+    padding-top: 1.2rem;
+    padding-bottom: .9rem;
+    text-align: center;
+    border-radius: .4rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    box-shadow: 0 .3rem 0 0 hsl(154, 59%, 46%);
+    margin-top:1.2rem;
+}
+/* text below */
+.text-below{
+    font-size: .7rem;
+    color: var(--neutral-100);
+}
+.text-below-text{
+    margin: auto;
+    text-align: center;
+    max-width: 85%;
+    font-weight: var(--fw-700);
+}
+
+.text-below-text a {
+    text-decoration: none;
+    color: var(--primary-300);
+}
+
+
+/* errer message */
+.form-container{
+  position: relative;
+}
+/* .form-elem[state="erreur"]{
+
+  border: 2px solid hsl(358, 40%, 65%);
+} */
+
+.error-msg {
+  text-align: end;
+  color: hsl(0, 100%, 74%);
+  font-style: italic;
+  font-size: .8rem;
+}
+
+.error-icon-input-container {
+  position: relative;
+  height: min-content;
+}
+.error-icon{
+  position: absolute;
+  width: 1.3rem;
+  right: 1rem;
+  top: 2rem;
+}
+
+
+
+/* .error-icon{
+  position: absolute;
+  width: 1.5rem;
+  right: 2.5rem;
+}
+.icon-1{
+  top: 3.4rem;
+}
+.icon-2{
+  top: 9rem;
+}
+.icon-3{
+  top: 14.6rem;
+}
+.icon-4{
+  top: 20.2rem;
+} */
+
+
+
+
+/* active state */
+.submit-button:active {
+  background-color: hsl(154, 59%, 60%);
+  cursor: pointer;
+  transform: translateY(.1rem);
+  box-shadow: 0 .2rem 0 0 hsl(154, 59%, 46%);
+}
+input:focus-within{
+  border-color: var(--neutral-500);
+}
+/* desktop version */
+@media  (min-width: 600px){
+  html {
+    background-image: url('./images/bg-intro-desktop.png');
+  }
+  body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+    main {
+      display: grid;
+      grid-template-columns: repeat(2,1fr);
+      padding: 0rem 8rem;
+      grid-gap: 3rem;
+    }
+    .left-text-container{
+      display: block;
+      flex-direction: column;
+      align-items: flex-start;
+      text-align: start;
+      margin: auto;
+      padding: 0;
+    }
+    .title {
+      margin-top: 0rem;
+      font-size: 3rem;
+      text-align: start;
+      margin-left: 0;
+      line-height: 3rem;
+      max-width: 30rem;
+      margin-bottom: 5rem;
+    }
+    .paragraphe {
+      font-size: 1rem;
+      text-align: start;
+      max-width: 35rem;
+      margin: 0;
+  }
+
+
+
+
+
+
+  .right-text-container{
+    max-width: 30rem;
+    min-width: 25rem;
+  }
+  /* second part */
+.try-it-free-container {
+  font-weight: var(--fw-600);
+  text-align: center;
+  padding: 1rem;
+  margin-bottom: 1.3rem;
+  border-radius: .8rem;
+  line-height: 1.5rem;
+  box-shadow: 0 .5rem 0 0 hsl(249 10% 26% /.25);
+}
+.try-it-free-text{
+  width: 80%;
+  margin: auto;
+  font-size: .8rem;
+}
+
+/* form */
+.form-container {
+  /* margin:1rem; */
+  padding: 1rem 2rem;
+  border-radius: .5rem;
+
+}
+.form-elem{
+  border: 1px solid  hsl(246 25% 77% / .5);
+  padding: .8rem .8rem;
+  border-radius: .4rem;
+  margin-bottom: 0;
+  margin-top: 1rem;
+}
+.form-elem::placeholder {
+  font-weight: var(--fw-600);
+  font-size: .8rem;
+}
+
+.form-elem {
+  color: var(--neutral-500);
+  font-weight: var(--fw-600);
+  font-size: .8rem;
+}
+
+/* submit button */
+.submit-button {
+  padding-top: 1.2rem;
+  padding-bottom: .9rem;
+  margin-bottom: 1rem;
+  font-size: .8rem;
+  box-shadow: 0 .3rem 0 0 hsl(154, 59%, 46%);
+}
+/* text below */
+.text-below{
+  font-size: .7rem;
+  color: var(--neutral-100);
+}
+.text-below-text{
+  margin: auto;
+  text-align: center;
+  max-width: none;
+  font-weight: var(--fw-700);
+  margin-top: 0;
+}
+
+
+/* errer message */
+.form-container{
+  position: relative;
+}
+/* .form-elem[state="erreur"]{
+
+  border: 2px solid hsl(358, 40%, 65%);
+} */
+
+.error-msg {
+  text-align: end;
+  color: hsl(0, 100%, 74%);
+  font-style: italic;
+}
+
+.error-icon-input-container {
+  position: relative;
+  height: min-content;
+}
+.error-icon{
+  position: absolute;
+  width: 1.3rem;
+  right: 1.5rem;
+  top: 1.9rem;
+}
+/* .icon-1{
+  top: 1.5rem;
+}
+.icon-2{
+  top: 1.5rem;
+}
+.icon-3{
+  top: 1.5rem;
+}
+.icon-4{
+  top: 1.5rem;
+} */
+
+
+
+
+}
+
+@media (hover: hover) {
+  .submit-button:hover {
+    background-color: hsl(154, 59%, 60%);
+    cursor: pointer;
+}
+}
